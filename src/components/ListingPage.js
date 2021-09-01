@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import SvgIcon from "@material-ui/core/SvgIcon";
 import red from "@material-ui/core/colors/red";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Listing from "./Listing.js";
