@@ -19,7 +19,13 @@ export default {
       hours: "7AM-12AM Daily",
       address: "3825 Lake Austin Blvd, Austin, TX 78703",
     },
-
+    {
+      name: "Crux Climbing Center",
+      description:
+        "From experienced climbers to Austinites looking for a new workout option, Crux has something for everyone.",
+      hours: "MON–THURS: 6AM – 10PM, FRI: 10AM-10PM, SAT-SUN: 10AM-8PM",
+      address: "6015 Dillard Cir Unit B Austin, TX 78752",
+    },
 
   ],
 };
