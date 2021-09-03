@@ -26,6 +26,7 @@ export default {
       hours: "MON–THURS: 6AM – 10PM, FRI: 10AM-10PM, SAT-SUN: 10AM-8PM",
       address: "6015 Dillard Cir Unit B Austin, TX 78752",
     },
-
+    
   ],
+  map: []
 };
