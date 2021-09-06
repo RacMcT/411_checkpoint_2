@@ -3,7 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import Link from "react"
+
 import "./Dashboard.css"
 
 const checkAuth = () => {
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = props => {
   return (
     <>
-      <AppBar style={{ backgroundColor: green["A700"] }} position="relative">
+      <AppBar position="relative">
         <Toolbar>
           <Typography variant="h6" style={{ flexGrow: "1" }}>
             Austin Small Businesses
@@ -61,8 +62,8 @@ const Dashboard = props => {
       </AppBar>
 
       {checkAuth() ? (
-        <div className="UserBar" style={{ backgroundColor: grey[300] }} position="relative">
-          <Typography variant="p" style={{ flexGrow: "1", color: grey[500] }}>
+        <div className="UserBar" position="relative">
+          <Typography variant="p" style={{ flexGrow: "1"}}>
             {props.user}
           </Typography>
         </div>
