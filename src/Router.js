@@ -2,7 +2,6 @@ import { Switch, Route, Redirect } from "react-router";
 import cookie from "cookie"
 
 import AddListingContainer from "./containers/AddListing.js"
-import ListingContainer from "./containers/Listing.js"
 import ListingPageContainer from "./containers/ListingPage.js"
 import LoginContainer from "./containers/Login.js"
 
@@ -26,7 +25,7 @@ const Router = () => {
         <LoginContainer />
       </Route>
       <Route path="/">
-        <ListingContainer checkAuth={checkAuth} />
+        <ListingPageContainer checkAuth={checkAuth} />
       </Route>
     </Switch>
   )

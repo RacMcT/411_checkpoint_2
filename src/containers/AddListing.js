@@ -1,5 +1,5 @@
 import { connect, Connect } from "react-redux"
-import AddListing from "../components/addListing/AddListing"
+import AddListing from "../components/AddListing"
 import { addListing } from "../redux/actions"
 
 const mapStateToProps = state => {

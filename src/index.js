@@ -1,21 +1,15 @@
-  
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom";
-import Router from "./Router.js";
-import Dashboard from "./containers/Dashboard.js";
-import { Provider } from "react-redux";
-import store from "./redux/store";
+  import React from "react"
+import ReactDOM from "react-dom"
 
-const Main = () => {
-  return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <Dashboard />
-        <Router />
-      </BrowserRouter>
-    </Provider>
-  );
-};
+import "./index.css"
+import App from "./App"
+import reportWebVitals from "./reportWebVitals"
 
-ReactDOM.render(<Main />, document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+)
+
+reportWebVitals()
