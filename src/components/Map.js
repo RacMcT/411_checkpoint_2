@@ -1,6 +1,6 @@
 import React from "react"
 import { useParams } from "react-router"
-import { GoogleMap, withScriptjs, withGoogleMap, Marker } from "react-google-maps"
+import { withScriptjs, withGoogleMaps, Marker } from "react-google-maps"
 
 import MapComponent from "./MapSection"
 
