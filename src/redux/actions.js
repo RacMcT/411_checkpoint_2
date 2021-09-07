@@ -1,3 +1,20 @@
+export const login = (username, password) => {
+  return {
+    type: "LOGIN",
+    value: {
+      username,
+      password,
+    },
+  };
+};
+
+export const logout = () => {
+  return {
+    type: "LOGOUT",
+    value: "",
+  };
+};
+
 export const addListing = listing => {
   return {
     type: "ADD_LISTING",

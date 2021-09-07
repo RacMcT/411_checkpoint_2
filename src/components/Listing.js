@@ -1,78 +1,27 @@
-import React, { useEffect } from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import Maps from "./Map.js";
 
-import Delete from "@material-ui/icons/Delete"
-import { red } from "@material-ui/core/colors"
-import Table from "@material-ui/core/Table"
-import TableBody from "@material-ui/core/TableBody"
-import TableCell from "@material-ui/core/TableCell"
-import TableContainer from "@material-ui/core/TableContainer"
-import TableHead from "@material-ui/core/TableHead"
-import TableRow from "@material-ui/core/TableRow"
-import Paper from "@material-ui/core/Paper"
+const Listing = (props) => {
+  const id = props.match.params.id;
+  let listing = props.listings.find((x) => x.id == id);
+  console.log(listing);
 
-
-function Listing(props) {
-  useEffect(() => {
-    props.clearMarker()
-  }, [])
+  const mapStyles = {
+    width: "100vh",
+    height: "200px",
+  };
 
   return (
-    <>
+    <div id="listingContainer">
       <main>
-        <TableContainer>
-          <Table style={{ minWidth: "650" }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell style={{ fontSize: "16px" }}>Name</TableCell>
-                <TableCell style={{ fontSize: "16px" }} align="left">
-                  Description
-                </TableCell>
-                <TableCell style={{ fontSize: "16px" }} align="left">
-                  Hours
-                </TableCell>
-                <TableCell style={{ fontSize: "16px" }} align="left">
-                  Address
-                </TableCell>
-                {props.checkAuth() ? (
-                  <TableCell style={{ fontSize: "16px" }} align="left">
-                    Delete
-                  </TableCell>
-                ) : null}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {props.listings.map(({ name, id, description, hours, address }, idx) => {
-                return (
-                  <TableRow key={name}>
-                    <TableCell style={{ fontSize: "16px" }} component="th" scope="row">
-                      <Link to={`/details/${id}`} className="details-link">
-                        {name}
-                      </Link>
-                    </TableCell>
-                    <TableCell style={{ fontSize: "16px" }} align="left">
-                      {description}
-                    </TableCell>
-                    <TableCell style={{ fontSize: "16px" }} align="left">
-                      {hours}
-                    </TableCell>
-                    <TableCell style={{ fontSize: "16px" }} align="left">
-                      {address}
-                    </TableCell>
-                    {props.checkAuth() ? (
-                      <TableCell style={{ fontSize: "16px" }} align="left">
-                        <Delete className="five" onClick={e => props.removeListing(idx)} style={{ color: red[500] }}></Delete>
-                      </TableCell>
-                    ) : null}
-                  </TableRow>
-                )
-              })}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <h1>{listing.name}</h1>
+        <p>{listing.address}</p>
+        <p>{listing.hours}</p>
+        <p>{listing.description}</p>
       </main>
-    </>
-  )
-}
+      <Maps address={listing.coords} />
+    </div>
+  );
+};
 
-export default Listing
+export default Listing;

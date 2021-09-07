@@ -2,7 +2,7 @@ import React from "react"
 import { useParams } from "react-router"
 import { GoogleMap, withScriptjs, withGoogleMap, Marker } from "react-google-maps"
 
-import MapComponent from "./MapComponent"
+import MapComponent from "./MapSection"
 
 const WrappedMap = withScriptjs(withGoogleMap(MapComponent))
 const API_KEY = process.env.REACT_APP_BUSINESS_API_KEY
