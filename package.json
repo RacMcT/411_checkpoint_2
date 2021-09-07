@@ -9,6 +9,8 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "cookies": "^0.8.0",
+    "google-map-react": "^2.1.10",
+    "google-maps-react": "^2.0.6",
     "http-proxy": "^1.18.1",
     "react": "^17.0.2",
     "react-cookie": "^4.1.1",
